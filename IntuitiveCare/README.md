@@ -1,6 +1,6 @@
-# 🏥 API de Operadoras de plano de saúde
+# 🏥 Testes de nivelamento IntuitiveCare
 
-API REST para consulta de operadoras de plano saúde, desenvolvida em Java com Spring Boot.
+Testes que consistem em manipulação de dados, web scraping e desenvolvimento e testes de API
 
 ## 🚀 Tecnologias
 - Java 22
@@ -11,7 +11,7 @@ API REST para consulta de operadoras de plano saúde, desenvolvida em Java com S
 ## 📋 Pré-requisitos
 - JDK 18+
 - Maven 3.8+
-- MySql (ou outro banco, se aplicável)
+- MySql 
 
 
 ## 📋 Diagrama da estrutura de arquivos detalhadas
