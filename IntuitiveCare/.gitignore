@@ -1,0 +1,58 @@
+
+
+### Diretórios gerados ###
+/target/
+/bin/
+/build/
+/out/
+/.settings/
+/.idea/
+
+### Arquivos específicos ###
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+*.DS_Store
+.classpath
+.project
+.settings/
+.idea/
+.factorypath
+
+### Arquivos de ambiente ###
+.env
+*.properties
+!application.properties
+
+### Dados locais ###
+*.db
+*.sqlite
+
+### Sistemas operacionais ###
+Thumbs.db
+
+### VS Code ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### Eclipse ###
+.metadata/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+### Maven ###
+log/
+dependency-reduced-pom.xml
+
+
+/node_modules/
+/dist/
+*.env.local

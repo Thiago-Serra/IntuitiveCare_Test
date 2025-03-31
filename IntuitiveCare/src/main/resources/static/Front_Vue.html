@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste Vue + API Java</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input v-model="termoBusca" placeholder="Buscar operadoras" />
+    <button @click="buscarOperadoras">Buscar</button>
+    <ul>
+      <li v-for="op in operadoras" :key="op.cnpj">
+        {{ op.razaoSocial }} - {{ op.registroAns }}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          termoBusca: '',
+          operadoras: []
+        };
+      },
+      methods: {
+        buscarOperadoras() {
+          axios.get('http://localhost:8080/api/operadoras/buscar', {
+            params: { termo: this.termoBusca }
+          })
+          .then(response => {
+            this.operadoras = response.data;
+          })
+          .catch(error => {
+            console.error("Erro na API:", error);
+          });
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
